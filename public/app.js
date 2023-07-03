@@ -13231,6 +13231,13 @@ jQuery(function($){ $.localScroll({filter:'.smoothScroll'}); });
 // PORTFOLIO ITEMS DISPLAY
 $(document).ready(function(){
 	new gnMenu( document.getElementById( 'gn-menu' ) );
+
+	// Put in the day of the week, such as Monday or Tuesday at #day-of-week
+	let date = new Date();
+	let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	let dayOfWeek = days[date.getDay()];
+	$('#day-of-week').text(dayOfWeek);
+
 	// $('.carousel').carousel({
 	//   interval: 5500
 	// });
